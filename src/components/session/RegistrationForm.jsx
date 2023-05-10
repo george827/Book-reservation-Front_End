@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
 
 const RegistrationForm = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     if (name) {
-      fetch("http://localhost:3000/api/v1/register", {
+      fetch('http://localhost:3000/api/v1/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name }),
       })
         .then((response) => {
           if (response.ok) {
-            window.location.pathname = "/";
+            window.location.pathname = '/';
           } else {
-            alert('failed to create user');
+            throw new Error(response.status);
           }
         })
         .catch((error) => {
-          console.error(error);
-          alert('Failed to create user. Please try again');
+          throw new Error(error);
         });
     }
   };

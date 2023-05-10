@@ -24,8 +24,7 @@ const LoginForm = () => {
           window.location.pathname = '/homepage';
         })
         .catch((error) => {
-          console.error('Error:', error);
-          alert('Invalid name');
+          throw new Error(error);
         });
     }
   };
@@ -48,7 +47,7 @@ const LoginForm = () => {
         <button type="submit">Login</button>
       </div>
       <div className="form-group">
-        <p>Don't have an account?</p>
+        <p>Don&apos;t have an account?</p>
         <Link to="/register">Register</Link>
       </div>
     </form>
