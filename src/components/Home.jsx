@@ -1,5 +1,5 @@
-import React from "react";
-import NavigationPanel from "./NavigationPanel";
+import React from 'react';
+import NavigationPanel from './NavigationPanel';
 
 const Home = () => (
   <main>

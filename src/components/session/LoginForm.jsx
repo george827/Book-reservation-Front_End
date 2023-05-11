@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (name) {
-      fetch("http://localhost:3001/api/v1/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      fetch('http://localhost:3001/api/v1/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name }),
       })
         .then((response) => {
@@ -18,10 +18,10 @@ const LoginForm = () => {
         })
         .then((data) => {
           localStorage.setItem(
-            "user",
-            JSON.stringify({ name: data.name, id: data.user_id })
+            'user',
+            JSON.stringify({ name: data.name, id: data.user_id }),
           );
-          window.location.pathname = "/homepage";
+          window.location.pathname = '/homepage';
         })
         .catch((error) => {
           throw new Error(error);
