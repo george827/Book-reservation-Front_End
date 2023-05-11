@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const RegistrationForm = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     if (name) {
-      fetch('http://localhost:3000/api/v1/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      fetch("http://localhost:3001/api/v1/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name }),
       })
         .then((response) => {
           if (response.ok) {
-            window.location.pathname = '/';
+            window.location.pathname = "/";
           } else {
             throw new Error(response.status);
           }
