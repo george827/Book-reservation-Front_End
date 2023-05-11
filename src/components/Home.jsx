@@ -1,9 +1,13 @@
 import React from 'react';
+import NavigationPanel from './NavigationPanel';
 
 const Home = () => (
-  <div>
-    <h1>Home , welcome</h1>
-  </div>
+  <main>
+    <NavigationPanel />
+    <section className="home-section">
+      <h1>Home , welcome</h1>
+    </section>
+  </main>
 );
 
 export default Home;
