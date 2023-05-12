@@ -17,7 +17,7 @@ const TableDetails = () => {
           <div className="col-md-6">
             <img src={image} alt={name} className="img-fluid" />
           </div>
-          <div className="col-md-6 d-flex flex-column justify-content-end">
+          <div className="col-md-6 d-flex flex-column justify-content-end mb-auto">
             <p className="details-title">
               <strong>
                 {name}
@@ -62,7 +62,7 @@ const TableDetails = () => {
             </Link>
           </div>
         </div>
-        <Link to="/homepage" className="back-link">
+        <Link to="/homepage" className="back-link mt-4">
           Back to Home
         </Link>
       </div>

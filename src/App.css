@@ -160,9 +160,9 @@ img {
   transition: all 0.3s linear;
 }
 
- /* ---sessionpages---- */
+/* ---sessionpages---- */
 
- .session-btn {
+.session-btn {
   background-color: #9acd32;
   border: none;
   color: #fff;
@@ -222,6 +222,18 @@ li:nth-child(odd) {
 .img-fluid {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
+}
+
+.back-link {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  width: fit-content;
+  margin: 0 15px;
+  margin-bottom: 20px;
+  background: green;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* --------------------- DESKTOP VERSION ---------------------- */
