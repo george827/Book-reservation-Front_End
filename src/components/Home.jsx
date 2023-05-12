@@ -1,11 +1,12 @@
-import React from 'react';
-import NavigationPanel from './NavigationPanel';
+import React from "react";
+import NavigationPanel from "./NavigationPanel";
+import RestaurantTables from "./RestaurantTables";
 
 const Home = () => (
   <main>
     <NavigationPanel />
     <section className="home-section">
-      <h1>Home , welcome</h1>
+      <RestaurantTables />
     </section>
   </main>
 );

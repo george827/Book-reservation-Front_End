@@ -71,30 +71,16 @@ body,
 main {
   min-height: 100%;
   background: #f1f5f8;
-  display: flex;
 }
 
-nav {
-  padding: 10% 10px;
-  border-right: 2px solid #eee;
-  width: 15%;
-}
-
-ul {
-  list-style: none;
-}
-
-nav li {
-  font-size: 20px;
-  padding: 5px 0;
-}
-
-.home-section {
+.tables-section {
   position: relative;
-  width: 85%;
+  width: 100%;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15% 0;
 }
 
 .prev-btn {
@@ -114,11 +100,12 @@ nav li {
 .tables {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 15px;
 }
 
 .single-table {
-  width: 350px;
+  width: 80vw;
   background: #fff;
   border-radius: 5px;
   margin: 20px 0;
@@ -180,7 +167,7 @@ img {
   }
 
   .sidenav h4 {
-    font-size: 3vw;
+    font-size: 2vw;
     color: #333;
   }
 
@@ -189,7 +176,7 @@ img {
   }
 
   .sidenav-link {
-    font-size: 2.6vw;
+    font-size: 1.7vw;
     padding: 5px;
     text-decoration: none;
     color: #333;
@@ -201,7 +188,7 @@ img {
   }
 
   .nav-section {
-    width: 23%;
+    width: 18%;
     min-height: 100%;
     background-color: #fff;
     padding: 5% 10px;
@@ -209,7 +196,11 @@ img {
   }
 
   .home-section {
-    width: 77%;
+    width: 82%;
     min-height: 100%;
+  }
+
+  .single-table {
+    width: 23vw;
   }
 }
