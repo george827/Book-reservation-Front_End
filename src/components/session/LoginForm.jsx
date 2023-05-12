@@ -29,24 +29,23 @@ const LoginForm = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="container mt-5 card p-5 my-card">
       <div className="form-group">
-        <label htmlFor="email">
-          Name
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-          />
-        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          className="form-control"
+          placeholder="Enter your name"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
       </div>
 
-      <div className="form-group">
-        <button type="submit">Login</button>
+      <div className="form-group mt-4">
+        <button type="submit" className="session-btn">Login</button>
       </div>
-      <div className="form-group">
+      <div className="form-group mt-2">
         <p>Don&apos;t have an account?</p>
         <Link to="/register">Register</Link>
       </div>

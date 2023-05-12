@@ -25,22 +25,21 @@ const RegistrationForm = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="container mt-5 card p-5 my-card">
       <div className="form-group">
-        <label htmlFor="name">
-          Name
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-          />
-        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          className="form-control"
+          placeholder="Enter your name"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
       </div>
 
-      <div className="form-group">
-        <button type="submit">Register</button>
+      <div className="form-group mt-4">
+        <button type="submit" className="session-btn">Register</button>
       </div>
     </form>
   );
