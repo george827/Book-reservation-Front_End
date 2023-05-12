@@ -1,12 +1,10 @@
-import React from "react";
-import RestaurantTables from "./RestaurantTables";
+import React from 'react';
+import RestaurantTables from './RestaurantTables';
 
-const HomePage = () => {
-  return (
-    <main>
-      <RestaurantTables />
-    </main>
-  );
-};
+const HomePage = () => (
+  <main>
+    <RestaurantTables />
+  </main>
+);
 
 export default HomePage;

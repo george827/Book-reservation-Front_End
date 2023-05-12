@@ -1,24 +1,24 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchRestaurantTablesData = createAsyncThunk(
-  "restaurantTables/fetchRestaurantTablesData",
+  'restaurantTables/fetchRestaurantTablesData',
   async () => {
     const response = await fetch(
-      "http://127.0.0.1:3001/api/v1/restaurant_tables"
+      'http://127.0.0.1:3001/api/v1/restaurant_tables',
     );
     const data = await response.json();
     return data;
-  }
+  },
 );
 
 const initialState = {
   loading: false,
   tablesData: [],
-  error: "",
+  error: '',
 };
 
 export const restaurantTablesSlice = createSlice({
-  name: "restaurantTables",
+  name: 'restaurantTables',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -35,7 +35,7 @@ export const restaurantTablesSlice = createSlice({
       return newState;
     });
     builder.addCase(fetchRestaurantTablesData.rejected, (state) => {
-      const newState = { ...state, loading: false, error: "404 Not Found" };
+      const newState = { ...state, loading: false, error: '404 Not Found' };
       return newState;
     });
   },
