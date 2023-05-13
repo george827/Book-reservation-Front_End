@@ -226,7 +226,6 @@ li:nth-child(odd) {
 /* reservation-form */
 
 .reservation-form {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -280,6 +279,48 @@ li:nth-child(odd) {
   border-radius: 30px;
   border: none;
   font-size: 20px;
+}
+
+.reserved-table-section {
+  width: 100%;
+  margin-top: 4%;
+}
+
+.reserved-table-section h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reserved-table-section article {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #f2f2f2;
+}
+
+.reserved-table-section p {
+  padding: 10px;
+  display: flex;
+}
+
+.reserved-table-section .span-title {
+  flex-basis: 100px;
+  flex-shrink: 0;
+}
+
+.reserved-table-section .reserved-span {
+  flex: 1;
+  font-weight: 800;
+}
+
+.reserved-table-section .check {
+  font-size: 70px;
+  color: #9acd32;
+  display: block;
+  margin: 20px auto;
 }
 
 /* --------------------- DESKTOP VERSION ---------------------- */
@@ -359,7 +400,7 @@ li:nth-child(odd) {
     position: static;
     top: auto;
     left: auto;
-    flex-basis: 120px;
+    flex-basis: 150px;
     flex-shrink: 0;
   }
 
@@ -388,5 +429,19 @@ li:nth-child(odd) {
 
   .reservation-btn {
     margin-top: 30px;
+  }
+
+  .reserved-table-section article {
+    width: 50vw;
+  }
+
+  .reserved-table-section .reserved-span {
+    margin-left: 20px;
+  }
+
+  .reserved-table-section .check {
+    font-size: 100px;
+    margin: 15px auto;
+    margin-top: 25px;
   }
 }

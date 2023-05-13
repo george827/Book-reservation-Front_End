@@ -8,6 +8,7 @@ import RegistrationForm from "./components/session/RegistrationForm";
 import TablesDetails from "./components/TableDetails";
 import NavigationPanel from "./components/NavigationPanel";
 import ReservationForm from "./components/ReservationForm";
+import ReservedTable from "./components/ReservedTable";
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
         <Route
           path="/single-table/:tableId/reservation-form/:tableId"
           element={<ReservationForm />}
+        />
+        <Route
+          path="/reserved-table/:tableId/:city/:startDate/:endDate"
+          element={<ReservedTable />}
         />
       </Routes>
     </main>
