@@ -7,6 +7,7 @@ import LoginForm from "./components/session/LoginForm";
 import RegistrationForm from "./components/session/RegistrationForm";
 import TablesDetails from "./components/TableDetails";
 import NavigationPanel from "./components/NavigationPanel";
+import ReservationForm from "./components/ReservationForm";
 
 function App() {
   return (
@@ -17,6 +18,11 @@ function App() {
         <Route path="/" element={<LoginForm />} />
         <Route path="/register" element={<RegistrationForm />} />
         <Route path="/TableDetails/:tableId" element={<TablesDetails />} />
+        <Route path="/reservation-form" element={<ReservationForm />} />
+        <Route
+          path="/single-table/:tableId/reservation-form/:tableId"
+          element={<ReservationForm />}
+        />
       </Routes>
     </main>
   );
