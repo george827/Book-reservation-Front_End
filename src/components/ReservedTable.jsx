@@ -1,14 +1,16 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { FaCheckCircle } from "react-icons/fa";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { FaCheckCircle } from 'react-icons/fa';
 
 const ReservedTable = () => {
-  const { tableId, city, startDate, endDate } = useParams();
+  const {
+    tableId, city, startDate, endDate,
+  } = useParams();
 
   const { tablesData } = useSelector((state) => state.restaurantTables);
-  const table = tablesData.find((table) => table.id === parseInt(tableId));
-  const user = JSON.parse(localStorage.getItem("user"));
+  const table = tablesData.find((table) => table.id === parseInt(tableId, 10));
+  const user = JSON.parse(localStorage.getItem('user'));
   const userName = user.name;
 
   return (

@@ -1,50 +1,50 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 // async thunk for fetching from API
 export const fetchReservations = createAsyncThunk(
-  "reservations/fetchReservations",
+  'reservations/fetchReservations',
   async (userId) => {
     const response = await fetch(
-      `http://127.0.0.1:3001/api/v1/reservations?user_id=${userId}`
+      `http://127.0.0.1:3001/api/v1/reservations?user_id=${userId}`,
     );
     const data = await response.json();
     return data;
-  }
+  },
 );
 
 // async thunk for making post request
 export const postReservation = createAsyncThunk(
-  "reservations/postReservation",
+  'reservations/postReservation',
   async (reservationsData) => {
-    const response = await fetch("http://127.0.0.1:3001/api/v1/reservations", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const response = await fetch('http://127.0.0.1:3001/api/v1/reservations', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(reservationsData),
     });
     const data = await response.json();
     return data;
-  }
+  },
 );
 
 // async thunk for deleting a reservation
 export const cancelReservation = createAsyncThunk(
-  "reservations/cancelReservation",
+  'reservations/cancelReservation',
   async (reservationId) => {
     const response = await fetch(
       `http://127.0.0.1:3001/api/v1/reservations/${reservationId}`,
       {
-        method: "DELETE",
-      }
+        method: 'DELETE',
+      },
     );
     const id = await response.json();
     return id;
-  }
+  },
 );
 
 const initialState = [];
 
 export const reservationsSlice = createSlice({
-  name: "reservations",
+  name: 'reservations',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -58,7 +58,7 @@ export const reservationsSlice = createSlice({
     });
     builder.addCase(cancelReservation.fulfilled, (state, action) => {
       const newState = state.filter(
-        (reservation) => reservation.id !== action.payload
+        (reservation) => reservation.id !== action.payload,
       );
       return newState;
     });

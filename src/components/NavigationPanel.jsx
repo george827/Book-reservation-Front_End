@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavigationPanel = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -11,7 +11,7 @@ const NavigationPanel = () => {
           <p>Logo</p>
           <button
             type="button"
-            className={`hamburger ${showLinks ? "active" : ""}`}
+            className={`hamburger ${showLinks ? 'active' : ''}`}
             onClick={() => setShowLinks(!showLinks)}
           >
             <span className="bar" />
