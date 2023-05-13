@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (name) {
-      fetch('http://localhost:3001/api/v1/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      fetch("http://localhost:3001/api/v1/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name }),
       })
         .then((response) => {
@@ -18,10 +18,10 @@ const LoginForm = () => {
         })
         .then((data) => {
           localStorage.setItem(
-            'user',
-            JSON.stringify({ name: data.name, id: data.user_id }),
+            "user",
+            JSON.stringify({ id: data.user_id, name: data.user_name })
           );
-          window.location.pathname = '/homepage';
+          window.location.pathname = "/homepage";
         })
         .catch((error) => {
           throw new Error(error);
@@ -43,7 +43,9 @@ const LoginForm = () => {
       </div>
 
       <div className="form-group mt-4">
-        <button type="submit" className="session-btn">Login</button>
+        <button type="submit" className="session-btn">
+          Login
+        </button>
       </div>
       <div className="form-group mt-2">
         <p>Don&apos;t have an account?</p>

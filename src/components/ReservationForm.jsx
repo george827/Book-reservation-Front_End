@@ -72,8 +72,8 @@ const ReservationForm = () => {
 
   if (!table) {
     return (
-      <form onSubmit={handleSubmit} className="registration-form">
-        <div className="form-control">
+      <form onSubmit={handleSubmit} className="reservation-form">
+        <div className="form-input">
           <label htmlFor="user">Username : </label>
           <input
             type="text"
@@ -83,7 +83,7 @@ const ReservationForm = () => {
             readOnly
           />
         </div>
-        <div className="form-control">
+        <div className="form-input">
           <label htmlFor="table-name">Table Name : </label>
           <select
             type="text"
@@ -101,7 +101,7 @@ const ReservationForm = () => {
             ))}
           </select>
         </div>
-        <div className="form-control">
+        <div className="form-input">
           <label htmlFor="city">City : </label>
           <input
             type="text"
@@ -112,7 +112,7 @@ const ReservationForm = () => {
             required
           />
         </div>
-        <div className="form-control date-picker-wrapper">
+        <div className="form-input date-picker-wrapper">
           <label htmlFor="start-date">Start Date : </label>
           <ReactDatePicker
             className="date-picker"
@@ -127,7 +127,7 @@ const ReservationForm = () => {
             onClick={() => document.getElementById("start-date").focus()}
           />
         </div>
-        <div className="form-control date-picker-wrapper">
+        <div className="form-input date-picker-wrapper">
           <label htmlFor="end-date">End Date : </label>
           <ReactDatePicker
             className="date-picker"
@@ -149,8 +149,8 @@ const ReservationForm = () => {
     );
   } else {
     return (
-      <form onSubmit={handleSubmit} className="registration-form">
-        <div className="form-control">
+      <form onSubmit={handleSubmit} className="reservation-form">
+        <div className="form-input">
           <label htmlFor="user">Username : </label>
           <input
             type="text"
@@ -160,7 +160,7 @@ const ReservationForm = () => {
             readOnly
           />
         </div>
-        <div className="form-control">
+        <div className="form-input">
           <label htmlFor="table-name">Table Name : </label>
           <input
             type="text"
@@ -170,7 +170,7 @@ const ReservationForm = () => {
             readOnly
           />
         </div>
-        <div className="form-control">
+        <div className="form-input">
           <label htmlFor="city">City : </label>
           <input
             type="text"
@@ -181,7 +181,7 @@ const ReservationForm = () => {
             required
           />
         </div>
-        <div className="form-control date-picker-wrapper">
+        <div className="form-input date-picker-wrapper">
           <label htmlFor="start-date">Start Date : </label>
           <ReactDatePicker
             className="date-picker"
@@ -196,7 +196,7 @@ const ReservationForm = () => {
             onClick={() => document.getElementById("start-date").focus()}
           />
         </div>
-        <div className="form-control date-picker-wrapper">
+        <div className="form-input date-picker-wrapper">
           <label htmlFor="end-date">End Date : </label>
           <ReactDatePicker
             className="date-picker"

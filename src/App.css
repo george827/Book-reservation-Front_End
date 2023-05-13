@@ -60,7 +60,7 @@ body,
 }
 
 .nav-links a:hover {
-  background-color: green;
+  background-color: #9acd32;
   color: #fff;
 }
 
@@ -139,7 +139,7 @@ img {
 
 .prev-btn,
 .next-btn {
-  color: green;
+  color: #9acd32;
   font-size: 20px;
   background: transparent;
   border-color: transparent;
@@ -218,9 +218,68 @@ li:nth-child(odd) {
   width: fit-content;
   margin: 0 15px;
   margin-bottom: 20px;
-  background: green;
+  background: #9acd32;
   color: #fff;
   cursor: pointer;
+}
+
+/* reservation-form */
+
+.reservation-form {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px 20px;
+}
+
+.reservation-form .form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.reservation-form label {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-size: 20px;
+}
+
+.reservation-form input,
+.reservation-form .date-picker {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.reservation-form .date-picker-wrapper {
+  position: relative;
+}
+
+.reservation-form .calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+}
+
+.reservation-btn {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px 40px;
+  background-color: #9acd32;
+  color: #fff;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
 }
 
 /* --------------------- DESKTOP VERSION ---------------------- */
@@ -234,6 +293,7 @@ li:nth-child(odd) {
 
   main {
     min-height: 100%;
+    background-color: #fff;
     display: flex;
   }
 
@@ -259,7 +319,7 @@ li:nth-child(odd) {
   }
 
   .sidenav-link:hover {
-    background-color: green;
+    background-color: #9acd32;
     color: #fff;
   }
 
@@ -278,5 +338,55 @@ li:nth-child(odd) {
 
   .single-table {
     width: 23vw;
+  }
+
+  /* reservation-form */
+
+  .reservation-form {
+    width: 50vw;
+    margin: 0 auto;
+  }
+
+  .reservation-form .form-input {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+
+    margin: 0 auto;
+  }
+
+  .reservation-form label {
+    position: static;
+    top: auto;
+    left: auto;
+    flex-basis: 120px;
+    flex-shrink: 0;
+  }
+
+  .reservation-form input,
+  .reservation-form .date-picker {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .reservation-form .date-picker-wrapper {
+    position: relative;
+  }
+
+  .reservation-form .calendar-icon {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+  }
+
+  .reservation-btn {
+    margin-top: 30px;
   }
 }
