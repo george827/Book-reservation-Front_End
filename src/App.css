@@ -392,7 +392,6 @@ li:nth-child(odd) {
     position: static;
     width: 100%;
     flex-direction: row;
-
     margin: 0 auto;
   }
 
