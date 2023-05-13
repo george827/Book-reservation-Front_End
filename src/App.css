@@ -147,6 +147,82 @@ img {
   transition: all 0.3s linear;
 }
 
+/* ---sessionpages---- */
+
+.session-btn {
+  background-color: #9acd32;
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.card {
+  max-width: 40rem;
+}
+
+/* details style */
+
+.details-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-title {
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+li:nth-child(odd) {
+  background-color: #eee;
+}
+
+.reserve {
+  width: fit-content;
+  margin-left: auto;
+  border-radius: 30px;
+  font-weight: 600;
+  align-self: flex-end;
+}
+
+.img-fluid {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.back-link {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  width: fit-content;
+  margin: 0 15px;
+  margin-bottom: 20px;
+  background: green;
+  color: #fff;
+  cursor: pointer;
+}
+
 /* --------------------- DESKTOP VERSION ---------------------- */
 
 @media (min-width: 768px) {

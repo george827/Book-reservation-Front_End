@@ -98,7 +98,7 @@ const RestaurantTables = () => {
                 </div>
                 <p>
                   {`${table.desc.substring(0, 100)}...`}
-                  <Link to={`/singleTable/${table.id}`}>See More</Link>
+                  <Link to={`/TableDetails/${table.id}`}>See More</Link>
                 </p>
               </div>
             </article>
