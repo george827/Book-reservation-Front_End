@@ -19,7 +19,7 @@ const LoginForm = () => {
         .then((data) => {
           localStorage.setItem(
             'user',
-            JSON.stringify({ name: data.name, id: data.user_id }),
+            JSON.stringify({ id: data.user_id, name: data.user_name }),
           );
           window.location.pathname = '/homepage';
         })
@@ -43,7 +43,9 @@ const LoginForm = () => {
       </div>
 
       <div className="form-group mt-4">
-        <button type="submit" className="session-btn">Login</button>
+        <button type="submit" className="session-btn">
+          Login
+        </button>
       </div>
       <div className="form-group mt-2">
         <p>Don&apos;t have an account?</p>
