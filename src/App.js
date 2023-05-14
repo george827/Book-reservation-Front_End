@@ -7,6 +7,7 @@ import LoginForm from './components/session/LoginForm';
 import RegistrationForm from './components/session/RegistrationForm';
 import TablesDetails from './components/TableDetails';
 import NavigationPanel from './components/NavigationPanel';
+import AddTable from './components/AddTable';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           path="/TableDetails/:tableId"
           element={<TablesDetails />}
         />
+        <Route path="/addTable" element={<AddTable />} />
       </Routes>
     </main>
   );
