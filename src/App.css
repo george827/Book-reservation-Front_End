@@ -60,7 +60,7 @@ body,
 }
 
 .nav-links a:hover {
-  background-color: green;
+  background-color: #9acd32;
   color: #fff;
 }
 
@@ -71,30 +71,16 @@ body,
 main {
   min-height: 100%;
   background: #f1f5f8;
-  display: flex;
 }
 
-nav {
-  padding: 10% 10px;
-  border-right: 2px solid #eee;
-  width: 15%;
-}
-
-ul {
-  list-style: none;
-}
-
-nav li {
-  font-size: 20px;
-  padding: 5px 0;
-}
-
-.home-section {
+.tables-section {
   position: relative;
-  width: 85%;
+  width: 100%;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15% 0;
 }
 
 .prev-btn {
@@ -114,11 +100,12 @@ nav li {
 .tables {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 15px;
 }
 
 .single-table {
-  width: 350px;
+  width: 80vw;
   background: #fff;
   border-radius: 5px;
   margin: 20px 0;
@@ -152,7 +139,7 @@ img {
 
 .prev-btn,
 .next-btn {
-  color: green;
+  color: #9acd32;
   font-size: 20px;
   background: transparent;
   border-color: transparent;
@@ -231,9 +218,109 @@ li:nth-child(odd) {
   width: fit-content;
   margin: 0 15px;
   margin-bottom: 20px;
-  background: green;
+  background: #9acd32;
   color: #fff;
   cursor: pointer;
+}
+
+/* reservation-form */
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px 20px;
+}
+
+.reservation-form .form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.reservation-form label {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-size: 20px;
+}
+
+.reservation-form input,
+.reservation-form .date-picker {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.reservation-form .date-picker-wrapper {
+  position: relative;
+}
+
+.reservation-form .calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+}
+
+.reservation-btn {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px 40px;
+  background-color: #9acd32;
+  color: #fff;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+}
+
+.reserved-table-section {
+  width: 100%;
+  margin-top: 4%;
+}
+
+.reserved-table-section h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reserved-table-section article {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #f2f2f2;
+}
+
+.reserved-table-section p {
+  padding: 10px;
+  display: flex;
+}
+
+.reserved-table-section .span-title {
+  flex-basis: 100px;
+  flex-shrink: 0;
+}
+
+.reserved-table-section .reserved-span {
+  flex: 1;
+  font-weight: 800;
+}
+
+.reserved-table-section .check {
+  font-size: 70px;
+  color: #9acd32;
+  display: block;
+  margin: 20px auto;
 }
 
 /* --------------------- DESKTOP VERSION ---------------------- */
@@ -247,6 +334,7 @@ li:nth-child(odd) {
 
   main {
     min-height: 100%;
+    background-color: #fff;
     display: flex;
   }
 
@@ -256,7 +344,7 @@ li:nth-child(odd) {
   }
 
   .sidenav h4 {
-    font-size: 3vw;
+    font-size: 2vw;
     color: #333;
   }
 
@@ -265,19 +353,19 @@ li:nth-child(odd) {
   }
 
   .sidenav-link {
-    font-size: 2.6vw;
+    font-size: 1.7vw;
     padding: 5px;
     text-decoration: none;
     color: #333;
   }
 
   .sidenav-link:hover {
-    background-color: green;
+    background-color: #9acd32;
     color: #fff;
   }
 
   .nav-section {
-    width: 20%;
+    width: 18%;
     min-height: 100%;
     background-color: #fff;
     padding: 5% 0;
@@ -285,7 +373,74 @@ li:nth-child(odd) {
   }
 
   .home-section {
-    width: 77%;
+    width: 82%;
     min-height: 100%;
+  }
+
+  .single-table {
+    width: 23vw;
+  }
+
+  /* reservation-form */
+
+  .reservation-form {
+    width: 50vw;
+    margin: 0 auto;
+  }
+
+  .reservation-form .form-input {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  .reservation-form label {
+    position: static;
+    top: auto;
+    left: auto;
+    flex-basis: 150px;
+    flex-shrink: 0;
+  }
+
+  .reservation-form input,
+  .reservation-form .date-picker {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .reservation-form .date-picker-wrapper {
+    position: relative;
+  }
+
+  .reservation-form .calendar-icon {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+  }
+
+  .reservation-btn {
+    margin-top: 30px;
+  }
+
+  .reserved-table-section article {
+    width: 50vw;
+  }
+
+  .reserved-table-section .reserved-span {
+    margin-left: 20px;
+  }
+
+  .reserved-table-section .check {
+    font-size: 100px;
+    margin: 15px auto;
+    margin-top: 25px;
   }
 }
