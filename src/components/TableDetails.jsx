@@ -1,48 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteRestaurantTable } from '../redux/tables/restaurantTablesSlice';
 
 const TableDetails = () => {
   const { tableId } = useParams();
-  const [showAlert, setShowAlert] = useState(false);
   const { tablesData } = useSelector((state) => state.restaurantTables);
   const table = tablesData.find((table) => table.id === parseInt(tableId, 10));
   const {
     table_size: TableSize, price, name, desc: description, image, id,
   } = table;
+  const dispatch = useDispatch();
 
   const handleDelete = (id) => {
-    console.log('Deleting table with ID:', id);
-    fetch(`http://127.0.0.1:3001/api/v1/restaurant_tables/${id}`, {
-      method: 'DELETE',
-    })
-      .then((response) => {
-        console.log('Response status:', response.status);
-        if (!response.ok) {
-          const error = new Error(response.status);
-          setShowAlert(true);
-          throw error;
-        } else {
-          return response.json();
-        }
-      })
-      .then(() => {
-        window.location.pathname = '/homepage';
-      })
-      .catch((error) => {
-        console.error('Error deleting table:', error);
-        throw new Error(error);
-      });
+    dispatch(deleteRestaurantTable(id));
+    window.location.href = '/homepage';
   };
 
   return (
     <>
       <div className="container details-container">
-        {showAlert && (
-        <div className="alert alert-danger" role="alert">
-          failed to delete table
-        </div>
-        )}
         <div className="row">
           <div className="col-md-6">
             <img src={image} alt={name} className="img-fluid" />

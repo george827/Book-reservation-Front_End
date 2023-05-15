@@ -11,6 +11,19 @@ export const fetchRestaurantTablesData = createAsyncThunk(
   },
 );
 
+export const deleteRestaurantTable = createAsyncThunk(
+  'restaurantTables/deleteRestaurantTable',
+  async (id) => {
+    const response = await fetch(
+      `http://localhost:3001/api/v1/restaurant_tables/${id}`, {
+        method: 'DELETE',
+      },
+    );
+    const data = await response.json();
+    return data;
+  },
+);
+
 const initialState = {
   loading: false,
   tablesData: [],
@@ -36,6 +49,16 @@ export const restaurantTablesSlice = createSlice({
     });
     builder.addCase(fetchRestaurantTablesData.rejected, (state) => {
       const newState = { ...state, loading: false, error: '404 Not Found' };
+      return newState;
+    });
+    builder.addCase(deleteRestaurantTable.fulfilled, (state, action) => {
+      const newState = {
+        ...state,
+        loading: false,
+        tablesData: state.tablesData.filter(
+          (table) => table.id !== action.payload.id,
+        ),
+      };
       return newState;
     });
   },
