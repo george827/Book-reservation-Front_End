@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { fetchRestaurantTablesData } from '../redux/tables/restaurantTablesSlice';
+import React, { useState, useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { fetchRestaurantTablesData } from "../redux/tables/restaurantTablesSlice";
 
 const RestaurantTables = () => {
   const dispatch = useDispatch();
@@ -15,14 +15,14 @@ const RestaurantTables = () => {
   }, [dispatch]);
 
   const { loading, tablesData } = useSelector(
-    (state) => state.restaurantTables,
+    (state) => state.restaurantTables
   );
 
   const [index, setIndex] = useState(0);
   const [singleTable, setSingleTable] = useState(tablesData ? index : null);
 
   const [threeTables, setThreeTables] = useState(
-    tablesData ? tablesData.slice(index, index + 3) : [],
+    tablesData ? tablesData.slice(index, index + 3) : []
   );
 
   const checkNumber = (number) => {
@@ -40,12 +40,18 @@ const RestaurantTables = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 768) {
         setSingleTable(checkNumber(index));
+        setThreeTables([]);
       } else {
-        setThreeTables([
-          tablesData[checkNumber(index - 1)],
-          tablesData[checkNumber(index)],
-          tablesData[checkNumber(index + 1)],
-        ]);
+        if (tablesData.length === 1) {
+          setSingleTable(checkNumber(index));
+          setThreeTables([tablesData[checkNumber(index)]]);
+        } else {
+          setThreeTables([
+            tablesData[checkNumber(index - 1)],
+            tablesData[checkNumber(index)],
+            tablesData[checkNumber(index + 1)],
+          ]);
+        }
       }
     }
   }, [index, tablesData]);
@@ -63,6 +69,7 @@ const RestaurantTables = () => {
   }
   return (
     <section className="tables-section">
+      <h2>Book a Table</h2>
       <button className="prev-btn" type="button" onClick={handlePrevClick}>
         <FaChevronLeft />
       </button>
@@ -76,10 +83,7 @@ const RestaurantTables = () => {
             <div className="table-info">
               <div className="title-price">
                 <h4>{tablesData[singleTable].name}</h4>
-                <h4 className="price">
-                  $
-                  {tablesData[singleTable].price}
-                </h4>
+                <h4 className="price">${tablesData[singleTable].price}</h4>
               </div>
               <p>
                 {`${tablesData[singleTable].desc.substring(0, 100)}...`}
@@ -90,17 +94,14 @@ const RestaurantTables = () => {
             </div>
           </article>
         )}
-        {tablesData.length > 0
-          && threeTables.map((table) => (
+        {tablesData.length > 0 &&
+          threeTables.map((table) => (
             <article key={table.name} className="single-table">
               <img src={table.image} alt={table.name} />
               <div className="table-info">
                 <div className="title-price">
                   <h4>{table.name}</h4>
-                  <h4 className="price">
-                    $
-                    {table.price}
-                  </h4>
+                  <h4 className="price">${table.price}</h4>
                 </div>
                 <p>
                   {`${table.desc.substring(0, 100)}...`}
