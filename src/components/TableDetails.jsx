@@ -59,16 +59,18 @@ const TableDetails = () => {
             </ul>
 
             <p>{description}</p>
-            <Link
-              to={{
-                pathname: `/single-table/${table.id}/reservation-form/${table.id}`,
-              }}
-              className="reserve"
-            >
-              <button type="button" className="session-btn reserve">Reserve</button>
-            </Link>
+            <div className="d-flex justify-content-between">
+              <Link
+                to={{
+                  pathname: `/single-table/${table.id}/reservation-form/${table.id}`,
+                }}
+                className="reserve"
+              >
+                <button type="button" className="session-btn reserve">Reserve</button>
+              </Link>
 
-            <button type="button" className="btn btn-danger" onClick={() => handleDelete(table.id)}>Delete</button>
+              <button type="button" className="btn-delete-table" onClick={() => handleDelete(table.id)}>Delete</button>
+            </div>
           </div>
         </div>
         <Link to="/homepage" className="back-link mt-4">

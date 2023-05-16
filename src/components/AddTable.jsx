@@ -37,7 +37,7 @@ const AddTable = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h1 className="text-center">Add Table</h1>
+            <h1 className="text-center">Create a Table</h1>
           </div>
         </div>
         <div className="row">
@@ -94,7 +94,9 @@ const AddTable = () => {
                 />
               </div>
 
-              <button type="submit" className="session-btn">Add Table</button>
+              <div className="btn-add-c">
+                <button type="submit" className="session-btn btn-add-table">Add Table</button>
+              </div>
             </form>
           </div>
         </div>

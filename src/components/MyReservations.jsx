@@ -25,9 +25,13 @@ const MyReservations = () => {
   }, []);
 
   return (
-    <div>
-      <h1>My Reservations</h1>
-      <p>{message}</p>
+    <div className="container d-flex flex-column my-reserve
+    align-items-center justify-content-center"
+    >
+      <div>
+        <h1>My Reservations</h1>
+        <p>{message}</p>
+      </div>
       <div className="reservations">
         {reservations.map((reservation) => (
           <Reservation key={reservation.id} reservation={reservation} />
