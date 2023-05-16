@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { fetchRestaurantTablesData } from "../redux/tables/restaurantTablesSlice";
 
@@ -71,7 +71,7 @@ const RestaurantTables = () => {
     <section className="tables-section">
       <h2>Book a Table</h2>
       <button className="prev-btn" type="button" onClick={handlePrevClick}>
-        <FaChevronLeft />
+        <FaCaretLeft />
       </button>
       <div className="tables">
         {window.innerWidth < 768 && tablesData.length > 0 && (
@@ -113,7 +113,7 @@ const RestaurantTables = () => {
       </div>
 
       <button className="next-btn" type="button" onClick={handleNextClick}>
-        <FaChevronRight />
+        <FaCaretRight />
       </button>
     </section>
   );

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const NavigationPanel = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -11,7 +12,7 @@ const NavigationPanel = () => {
           <p>Logo</p>
           <button
             type="button"
-            className={`hamburger ${showLinks ? 'active' : ''}`}
+            className={`hamburger ${showLinks ? "active" : ""}`}
             onClick={() => setShowLinks(!showLinks)}
           >
             <span className="bar" />
@@ -33,20 +34,35 @@ const NavigationPanel = () => {
         )}
       </nav>
       <div className="sidenav">
-        <h4>Logo Name</h4>
-        <div className="sidenav-links" />
-        <Link to="/homepage" className="sidenav-link">
-          Tables
-        </Link>
-        <Link to="/reservation-form" className="sidenav-link">
-          Make Reservation
-        </Link>
-        <Link to="/my-reservations" className="sidenav-link">
-          My Reservations
-        </Link>
-        <Link to="/login" className="sidenav-link">
-          Login
-        </Link>
+        <h4>Logo</h4>
+        <div className="sidenav-links">
+          <Link to="/homepage" className="sidenav-link">
+            Tables
+          </Link>
+          <Link to="/reservation-form" className="sidenav-link">
+            Make Reservation
+          </Link>
+          <Link to="/my-reservations" className="sidenav-link">
+            My Reservations
+          </Link>
+          <Link to="/login" className="sidenav-link">
+            Login
+          </Link>
+        </div>
+        <ul className="social-links">
+          <li className="social-link">
+            <FaTwitter />
+          </li>
+          <li className="social-link">
+            <FaFacebookF />
+          </li>
+          <li className="social-link">
+            <FaLinkedinIn />
+          </li>
+          <li className="social-link">
+            <FaGithub />
+          </li>
+        </ul>
       </div>
     </section>
   );
