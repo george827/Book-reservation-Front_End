@@ -19,6 +19,7 @@ const LoginForm = () => {
           if (!response.ok) {
             const error = new Error(response.status);
             setShowAlert(true);
+            setLoading(false);
             throw error;
           } else {
             setLoading(false);

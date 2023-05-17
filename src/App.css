@@ -263,6 +263,11 @@ li:nth-child(odd) {
   margin-top: 1rem;
 }
 
+.back-arrow {
+  color: #9acd32;
+  font-size: 25px;
+}
+
 /* reservation-form */
 
 .reservation-form {

@@ -24,6 +24,7 @@ const NavigationPanel = () => {
           <div className="nav-links">
             <Link to="/tables">Tables</Link>
             <Link to="/AddTable">Add Table</Link>
+            <Link to="/DeleteTable">Delete Table</Link>
             <Link to="/reservation-form">Make Reservation</Link>
             <Link to="/Myresercvations">My Reservations</Link>
             <Link to="/">Login</Link>
@@ -41,6 +42,9 @@ const NavigationPanel = () => {
         </Link>
         <Link to="/AddTable" className="sidenav-link">
           Add Table
+        </Link>
+        <Link to="/DeleteTable" className="sidenav-link">
+          Delete Table
         </Link>
         <Link to="/reservation-form" className="sidenav-link">
           Make Reservation
