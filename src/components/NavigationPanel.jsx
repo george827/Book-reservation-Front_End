@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import {
+  FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub,
+} from 'react-icons/fa';
 
 const NavigationPanel = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -12,7 +14,7 @@ const NavigationPanel = () => {
           <p>Logo</p>
           <button
             type="button"
-            className={`hamburger ${showLinks ? "active" : ""}`}
+            className={`hamburger ${showLinks ? 'active' : ''}`}
             onClick={() => setShowLinks(!showLinks)}
           >
             <span className="bar" />
@@ -22,7 +24,7 @@ const NavigationPanel = () => {
         </div>
 
         {showLinks && (
-          <div className="nav-links">
+          <div className="nav-links" data-testid="links-container">
             <Link to="/tables">Tables</Link>
             <Link to="/reservation-form">Make Reservation</Link>
             <Link to="/my-reservations">My Reservations</Link>

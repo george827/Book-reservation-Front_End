@@ -1,6 +1,6 @@
-import React from "react";
-import NavigationPanel from "./NavigationPanel";
-import RestaurantTables from "./RestaurantTables";
+import React from 'react';
+import NavigationPanel from './NavigationPanel';
+import RestaurantTables from './RestaurantTables';
 
 const Home = () => (
   <main>

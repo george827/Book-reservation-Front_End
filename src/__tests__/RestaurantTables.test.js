@@ -1,35 +1,36 @@
-import { render, screen, waitFor } from "@testing-library/react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Provider } from "react-redux";
-import store from "../redux/store";
-import RestaurantTables from "../components/RestaurantTables";
+import { render, screen, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
+import RestaurantTables from '../components/RestaurantTables';
 
-describe("RestaurantTables", () => {
-  test("renders loading...", () => {
+describe('RestaurantTables', () => {
+  test('renders loading...', () => {
     render(
       <Provider store={store}>
         <Router>
           <RestaurantTables />
         </Router>
-      </Provider>
+      </Provider>,
     );
 
-    const loadingElement = screen.getByText("Loading...");
-    expect(loadingElement).toBeInTheDocument;
+    const loadingElement = screen.getByText('Loading...');
+    expect(loadingElement).toBeInTheDocument();
   });
 
-  test("renders tables data", async () => {
+  test('renders tables data', async () => {
     render(
       <Provider store={store}>
         <Router>
           <RestaurantTables />
         </Router>
-      </Provider>
+      </Provider>,
     );
 
     await waitFor(() => {
-      const loadingElement = screen.queryByText("Loading...");
-      expect(loadingElement).not.toBeInTheDocument;
+      const loadingElement = screen.queryByText('Loading...');
+      expect(loadingElement).not.toBeInTheDocument();
     });
   });
 });
