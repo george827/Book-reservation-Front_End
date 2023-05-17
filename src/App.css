@@ -432,6 +432,18 @@ li:nth-child(odd) {
   margin-right: 0.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  .logout-btn {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #333;
+    background-color: #f2f2f2;
+    text-align: start;
+  }
+}
+
 /* --------------------- DESKTOP VERSION ---------------------- */
 
 @media (min-width: 768px) {
@@ -491,6 +503,21 @@ li:nth-child(odd) {
     margin-top: 9vw;
     display: flex;
     flex-direction: column;
+  }
+
+  .logout-btn {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    text-align: start;
+    width: 100%;
+  }
+
+  .logout-btn:hover {
+    background-color: #9acd32;
+    color: #fff;
   }
 
   .sidenav-link {

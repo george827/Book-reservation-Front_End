@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub,
 } from 'react-icons/fa';
+import LogoutButton from './session/LogoutButton';
 
 const NavigationPanel = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -30,7 +31,7 @@ const NavigationPanel = () => {
             <Link to="/DeleteTable">Delete Table</Link>
             <Link to="/reservation-form">Make Reservation</Link>
             <Link to="/Myresercvations">My Reservations</Link>
-            <Link to="/">Login</Link>
+            <LogoutButton />
             <Link to="/homepage" onClick={() => setShowLinks(false)}>
               Home
             </Link>
@@ -46,15 +47,16 @@ const NavigationPanel = () => {
           <Link to="/AddTable" className="sidenav-link">
             Add Table
           </Link>
+          <Link to="/DeleteTable" className="sidenav-link">
+            Delete Table
+          </Link>
           <Link to="/reservation-form" className="sidenav-link">
             Make Reservation
           </Link>
           <Link to="/Myresercvations" className="sidenav-link">
             My Reservations
           </Link>
-          <Link to="/" className="sidenav-link">
-            Login
-          </Link>
+          <LogoutButton className="sidenav-link" />
         </div>
         <ul className="social-links">
           <li className="social-link">
