@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteRestaurantTable } from '../redux/tables/restaurantTablesSlice';
 
 const TableDetails = () => {
   const { tableId } = useParams();
@@ -9,6 +10,12 @@ const TableDetails = () => {
   const {
     table_size: TableSize, price, name, desc: description, image, id,
   } = table;
+  const dispatch = useDispatch();
+
+  const handleDelete = (id) => {
+    dispatch(deleteRestaurantTable(id));
+    window.location.href = '/homepage';
+  };
 
   return (
     <>
@@ -52,14 +59,18 @@ const TableDetails = () => {
             </ul>
 
             <p>{description}</p>
-            <Link
-              to={{
-                pathname: `/single-table/${table.id}/reservation-form/${table.id}`,
-              }}
-              className="reserve"
-            >
-              <button type="button" className="session-btn reserve">Reserve</button>
-            </Link>
+            <div className="d-flex justify-content-between">
+              <Link
+                to={{
+                  pathname: `/single-table/${table.id}/reservation-form/${table.id}`,
+                }}
+                className="reserve"
+              >
+                <button type="button" className="session-btn reserve">Reserve</button>
+              </Link>
+
+              <button type="button" className="btn-delete-table" onClick={() => handleDelete(table.id)}>Delete</button>
+            </div>
           </div>
         </div>
         <Link to="/homepage" className="back-link mt-4">

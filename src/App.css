@@ -186,8 +186,20 @@ img {
   border-radius: 5px;
 }
 
-.card {
-  max-width: 40rem;
+.my-card {
+  min-width: 40rem;
+}
+
+.session-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spin-color {
+  color: #9acd32;
+
+  /* background-color: #9acd32; */
 }
 
 /* details style */
@@ -225,10 +237,8 @@ li:nth-child(odd) {
 
 .reserve {
   width: fit-content;
-  margin-left: auto;
   border-radius: 30px;
   font-weight: 600;
-  align-self: flex-end;
 }
 
 .img-fluid {
@@ -246,6 +256,36 @@ li:nth-child(odd) {
   background: #9acd32;
   color: #fff;
   cursor: pointer;
+}
+
+.btn-delete-table {
+  background-color: #dc3545;
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: fit-content;
+  margin-left: auto;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* -----Add a table---- */
+
+.form-group {
+  margin-top: 10px;
+}
+
+.btn-add-c {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-add-table {
+  margin-top: 1rem;
 }
 
 /* reservation-form */
@@ -349,6 +389,44 @@ li:nth-child(odd) {
   margin: 20px auto;
 }
 
+/* ---My Reservation---- */
+.my-reserve {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-reservation {
+  display: flex;
+  flex-direction: column;
+  border: #9acd32 2px solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.my-reservation:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px, rgb(51, 51, 51) 0 0 0 3px;
+}
+
+.my-reservation-img {
+  max-width: 30rem;
+}
+
+.reserved-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  min-width: 13rem;
+}
+
+.reserved-items li {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+  margin-right: 0.5rem;
+}
+
 /* --------------------- DESKTOP VERSION ---------------------- */
 
 @media (min-width: 768px) {
@@ -441,8 +519,19 @@ li:nth-child(odd) {
   .nav-section {
     min-height: 100%;
     background-color: #fff;
-    padding: 5% 10px;
+    padding: 5% 0;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* ---session page----- */
+
+  .my-card {
+    width: 100%;
+  }
+
+  .home-section {
+    width: 82%;
+    min-height: 100%;
   }
 
   .single-table {
@@ -511,5 +600,25 @@ li:nth-child(odd) {
     font-size: 100px;
     margin: 15px auto;
     margin-top: 25px;
+  }
+
+  /* -----my reservation page */
+  .my-reservation {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 50%;
+  }
+
+  .my-reservation-img {
+    width: 100%;
+  }
+
+  .reservation-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .reserve-list {
+    width: 100%;
   }
 }

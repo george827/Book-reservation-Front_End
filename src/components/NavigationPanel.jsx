@@ -11,7 +11,7 @@ const NavigationPanel = () => {
     <section className="nav-section">
       <nav>
         <div className="header">
-          <p>Logo</p>
+          <p className="ms-1">Logo</p>
           <button
             type="button"
             className={`hamburger ${showLinks ? 'active' : ''}`}
@@ -26,9 +26,10 @@ const NavigationPanel = () => {
         {showLinks && (
           <div className="nav-links" data-testid="links-container">
             <Link to="/tables">Tables</Link>
+            <Link to="/AddTable">Add Table</Link>
             <Link to="/reservation-form">Make Reservation</Link>
-            <Link to="/my-reservations">My Reservations</Link>
-            <Link to="/login">Login</Link>
+            <Link to="/Myresercvations">My Reservations</Link>
+            <Link to="/">Login</Link>
             <Link to="/homepage" onClick={() => setShowLinks(false)}>
               Home
             </Link>
@@ -41,13 +42,16 @@ const NavigationPanel = () => {
           <Link to="/homepage" className="sidenav-link">
             Tables
           </Link>
-          <Link to="/reservation-form" className="sidenav-link">
+          <Link to="/AddTable" className="sidenav-link">
+          Add Table
+        </Link>
+        <Link to="/reservation-form" className="sidenav-link">
             Make Reservation
           </Link>
-          <Link to="/my-reservations" className="sidenav-link">
+          <Link to="/Myresercvations" className="sidenav-link">
             My Reservations
           </Link>
-          <Link to="/login" className="sidenav-link">
+          <Link to="/" className="sidenav-link">
             Login
           </Link>
         </div>
