@@ -13,7 +13,7 @@ const AddTable = () => {
     const id = tablesData.length + 1;
     event.preventDefault();
     if (image && name && tableSize && price && desc) {
-      fetch('http://localhost:3001/api/v1/restaurant_tables', {
+      fetch('https://book-a-table.onrender.com/api/v1/restaurant_tables', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

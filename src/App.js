@@ -10,6 +10,7 @@ import ReservationForm from './components/ReservationForm';
 import ReservedTable from './components/ReservedTable';
 import AddTable from './components/AddTable';
 import MyReservations from './components/MyReservations';
+import DeleteTable from './components/DeleteTable';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/TableDetails/:tableId" element={<TablesDetails />} />
         <Route path="/reservation-form" element={<ReservationForm />} />
         <Route path="/Myresercvations" element={<MyReservations />} />
+        <Route path="/DeleteTable" element={<DeleteTable />} />
         <Route
           path="/single-table/:tableId/reservation-form/:tableId"
           element={<ReservationForm />}

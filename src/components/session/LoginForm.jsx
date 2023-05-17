@@ -10,7 +10,7 @@ const LoginForm = () => {
     event.preventDefault();
     setLoading(true);
     if (name) {
-      fetch('http://localhost:3001/api/v1/login', {
+      fetch('https://book-a-table.onrender.com/api/v1/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name }),
@@ -19,6 +19,7 @@ const LoginForm = () => {
           if (!response.ok) {
             const error = new Error(response.status);
             setShowAlert(true);
+            setLoading(false);
             throw error;
           } else {
             setLoading(false);

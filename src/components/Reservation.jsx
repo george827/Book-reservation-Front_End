@@ -8,11 +8,11 @@ const Reservation = ({ reservation }) => {
 
   const handleDelete = (id) => {
     dispatch(cancelReservation(id));
-    window.location.href = '/homepage';
+    window.location.reload();
   };
 
   return (
-    <div className="my-reservation mt-5 justify-content-between">
+    <div className="my-reservation mt-3 justify-content-between">
       <div className="reservation-image">
         <img src={reservation.restaurant_table.image} alt={reservation.table_name} className="my-reservation-img" />
       </div>

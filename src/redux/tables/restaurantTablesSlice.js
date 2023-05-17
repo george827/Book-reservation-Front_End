@@ -4,7 +4,7 @@ export const fetchRestaurantTablesData = createAsyncThunk(
   'restaurantTables/fetchRestaurantTablesData',
   async () => {
     const response = await fetch(
-      'http://127.0.0.1:3001/api/v1/restaurant_tables',
+      'https://book-a-table.onrender.com/api/v1/restaurant_tables',
     );
     const data = await response.json();
     return data;
@@ -15,7 +15,7 @@ export const deleteRestaurantTable = createAsyncThunk(
   'restaurantTables/deleteRestaurantTable',
   async (id) => {
     const response = await fetch(
-      `http://localhost:3001/api/v1/restaurant_tables/${id}`, {
+      `https://book-a-table.onrender.com/api/v1/restaurant_tables/${id}`, {
         method: 'DELETE',
       },
     );

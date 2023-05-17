@@ -5,7 +5,7 @@ export const fetchReservations = createAsyncThunk(
   'reservations/fetchReservations',
   async (userId) => {
     const response = await fetch(
-      `http://127.0.0.1:3001/api/v1/reservations?user_id=${userId}`,
+      `https://book-a-table.onrender.com/api/v1/reservations?user_id=${userId}`,
     );
     const data = await response.json();
     return data;
@@ -16,7 +16,7 @@ export const fetchReservations = createAsyncThunk(
 export const postReservation = createAsyncThunk(
   'reservations/postReservation',
   async (reservationsData) => {
-    const response = await fetch('http://127.0.0.1:3001/api/v1/reservations', {
+    const response = await fetch('https://book-a-table.onrender.com/api/v1/reservations', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(reservationsData),
@@ -31,7 +31,7 @@ export const cancelReservation = createAsyncThunk(
   'reservations/cancelReservation',
   async (reservationId) => {
     const response = await fetch(
-      `http://127.0.0.1:3001/api/v1/reservations/${reservationId}`,
+      `https://book-a-table.onrender.com/api/v1/reservations/${reservationId}`,
       {
         method: 'DELETE',
       },

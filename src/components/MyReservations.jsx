@@ -9,7 +9,7 @@ const MyReservations = () => {
 
   useEffect(() => {
     const fetchReservations = async () => {
-      const response = await fetch('http://localhost:3001/api/v1/reservations');
+      const response = await fetch('https://book-a-table.onrender.com/api/v1/reservations');
       const data = await response.json();
       if (data) {
         const userReservations = data.filter(

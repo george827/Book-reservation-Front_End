@@ -9,7 +9,7 @@ const RegistrationForm = () => {
     setLoading(true);
 
     if (name) {
-      fetch('http://localhost:3001/api/v1/register', {
+      fetch('https://book-a-table.onrender.com/api/v1/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name }),
