@@ -4,10 +4,14 @@ import RestaurantTables from './RestaurantTables';
 
 const Home = () => (
   <main>
-    <NavigationPanel />
-    <section className="home-section">
-      <RestaurantTables />
-    </section>
+    <div className="navigation-panel">
+      <NavigationPanel />
+    </div>
+    <div className="restaurant-tables">
+      <section className="home-section">
+        <RestaurantTables />
+      </section>
+    </div>
   </main>
 );
 

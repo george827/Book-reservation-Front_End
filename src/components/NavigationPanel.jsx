@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {
+  FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub,
+} from 'react-icons/fa';
 
 const NavigationPanel = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -21,7 +24,7 @@ const NavigationPanel = () => {
         </div>
 
         {showLinks && (
-          <div className="nav-links">
+          <div className="nav-links" data-testid="links-container">
             <Link to="/tables">Tables</Link>
             <Link to="/AddTable">Add Table</Link>
             <Link to="/DeleteTable">Delete Table</Link>
@@ -35,26 +38,38 @@ const NavigationPanel = () => {
         )}
       </nav>
       <div className="sidenav">
-        <h4>Logo Name</h4>
-        <div className="sidenav-links" />
-        <Link to="/homepage" className="sidenav-link">
-          Tables
-        </Link>
-        <Link to="/AddTable" className="sidenav-link">
-          Add Table
-        </Link>
-        <Link to="/DeleteTable" className="sidenav-link">
-          Delete Table
-        </Link>
-        <Link to="/reservation-form" className="sidenav-link">
-          Make Reservation
-        </Link>
-        <Link to="/Myresercvations" className="sidenav-link">
-          My Reservations
-        </Link>
-        <Link to="/" className="sidenav-link">
-          Login
-        </Link>
+        <h4>Logo</h4>
+        <div className="sidenav-links">
+          <Link to="/homepage" className="sidenav-link">
+            Tables
+          </Link>
+          <Link to="/AddTable" className="sidenav-link">
+            Add Table
+          </Link>
+          <Link to="/reservation-form" className="sidenav-link">
+            Make Reservation
+          </Link>
+          <Link to="/Myresercvations" className="sidenav-link">
+            My Reservations
+          </Link>
+          <Link to="/" className="sidenav-link">
+            Login
+          </Link>
+        </div>
+        <ul className="social-links">
+          <li className="social-link">
+            <FaTwitter />
+          </li>
+          <li className="social-link">
+            <FaFacebookF />
+          </li>
+          <li className="social-link">
+            <FaLinkedinIn />
+          </li>
+          <li className="social-link">
+            <FaGithub />
+          </li>
+        </ul>
       </div>
     </section>
   );
