@@ -43,9 +43,9 @@ const NavigationPanel = () => {
             Tables
           </Link>
           <Link to="/AddTable" className="sidenav-link">
-          Add Table
-        </Link>
-        <Link to="/reservation-form" className="sidenav-link">
+            Add Table
+          </Link>
+          <Link to="/reservation-form" className="sidenav-link">
             Make Reservation
           </Link>
           <Link to="/Myresercvations" className="sidenav-link">
