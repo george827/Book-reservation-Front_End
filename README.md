@@ -74,7 +74,7 @@ Click [here](https://github.com/george827/Book-reservation-Back-End.git) to acce
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://book-reservation-h17l.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
