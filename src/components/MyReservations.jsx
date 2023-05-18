@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Reservation from './Reservation';
+import NavigationPanel from './NavigationPanel';
 
 const MyReservations = () => {
   const [reservations, setReservations] = useState([]);
@@ -25,19 +26,22 @@ const MyReservations = () => {
   }, []);
 
   return (
-    <div className="container d-flex flex-column my-reserve
+    <>
+      <NavigationPanel />
+      <div className="container d-flex flex-column my-reserve
     align-items-center justify-content-center"
-    >
-      <div>
-        <h1>My Reservations</h1>
-        <p>{message}</p>
+      >
+        <div>
+          <h1>My Reservations</h1>
+          <p>{message}</p>
+        </div>
+        <div className="reservations mb-2">
+          {reservations.map((reservation) => (
+            <Reservation key={reservation.id} reservation={reservation} />
+          ))}
+        </div>
       </div>
-      <div className="reservations">
-        {reservations.map((reservation) => (
-          <Reservation key={reservation.id} reservation={reservation} />
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 

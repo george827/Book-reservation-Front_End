@@ -5,6 +5,7 @@ import ReactDatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { FaCalendar } from 'react-icons/fa';
 import { postReservation } from '../redux/reservations/reservationsSlice';
+import NavigationPanel from './NavigationPanel';
 
 const ReservationForm = () => {
   const navigate = useNavigate();
@@ -72,80 +73,83 @@ const ReservationForm = () => {
 
   if (!table) {
     return (
-      <form onSubmit={handleSubmit} className="reservation-form">
-        <div className="form-input">
-          <label htmlFor="user">Username : </label>
-          <input
-            type="text"
-            id="user"
-            name="user"
-            defaultValue={userName.charAt(0).toUpperCase() + userName.slice(1)}
-            readOnly
-          />
-        </div>
-        <div className="form-input">
-          <label htmlFor="table-name">Table Name : </label>
-          <select
-            type="text"
-            id="table-name"
-            name="table-name"
-            value={tableName}
-            onChange={(e) => setTableName(e.target.value)}
-            required
-          >
-            <option value="">Select a table</option>
-            {tablesData.map((table) => (
-              <option key={table.id} value={table.name}>
-                {table.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="form-input">
-          <label htmlFor="city">City : </label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-input date-picker-wrapper">
-          <label htmlFor="start-date">Start Date : </label>
-          <ReactDatePicker
-            className="date-picker"
-            id="start-date"
-            name="start-date"
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-            required
-          />
-          <FaCalendar
-            className="calendar-icon"
-            onClick={() => document.getElementById('start-date').focus()}
-          />
-        </div>
-        <div className="form-input date-picker-wrapper">
-          <label htmlFor="end-date">End Date : </label>
-          <ReactDatePicker
-            className="date-picker"
-            id="end-date"
-            name="end-date"
-            selected={endDate}
-            onChange={(date) => setEndDate(date)}
-            required
-          />
-          <FaCalendar
-            className="calendar-icon"
-            onClick={() => document.getElementById('end-date').focus()}
-          />
-        </div>
-        <button type="submit" className="reservation-btn">
-          Make Reservation
-        </button>
-      </form>
+      <>
+        <NavigationPanel />
+        <form onSubmit={handleSubmit} className="reservation-form">
+          <div className="form-input">
+            <label htmlFor="user">Username : </label>
+            <input
+              type="text"
+              id="user"
+              name="user"
+              defaultValue={userName.charAt(0).toUpperCase() + userName.slice(1)}
+              readOnly
+            />
+          </div>
+          <div className="form-input">
+            <label htmlFor="table-name">Table Name : </label>
+            <select
+              type="text"
+              id="table-name"
+              name="table-name"
+              value={tableName}
+              onChange={(e) => setTableName(e.target.value)}
+              required
+            >
+              <option value="">Select a table</option>
+              {tablesData.map((table) => (
+                <option key={table.id} value={table.name}>
+                  {table.name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-input">
+            <label htmlFor="city">City : </label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-input date-picker-wrapper">
+            <label htmlFor="start-date">Start Date : </label>
+            <ReactDatePicker
+              className="date-picker"
+              id="start-date"
+              name="start-date"
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              required
+            />
+            <FaCalendar
+              className="calendar-icon"
+              onClick={() => document.getElementById('start-date').focus()}
+            />
+          </div>
+          <div className="form-input date-picker-wrapper">
+            <label htmlFor="end-date">End Date : </label>
+            <ReactDatePicker
+              className="date-picker"
+              id="end-date"
+              name="end-date"
+              selected={endDate}
+              onChange={(date) => setEndDate(date)}
+              required
+            />
+            <FaCalendar
+              className="calendar-icon"
+              onClick={() => document.getElementById('end-date').focus()}
+            />
+          </div>
+          <button type="submit" className="reservation-btn">
+            Make Reservation
+          </button>
+        </form>
+      </>
     );
   }
   return (

@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="my-reservation mt-5 justify-content-between"
+        class="my-reservation mt-3 justify-content-between"
       >
         <div
           class="reservation-image"
@@ -80,7 +80,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="my-reservation mt-5 justify-content-between"
+      class="my-reservation mt-3 justify-content-between"
     >
       <div
         class="reservation-image"

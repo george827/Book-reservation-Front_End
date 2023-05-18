@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import NavigationPanel from './NavigationPanel';
 
 const AddTable = () => {
   const [image, setImage] = useState('');
@@ -34,6 +35,7 @@ const AddTable = () => {
   };
   return (
     <>
+      <NavigationPanel />
       <div className="container">
         <div className="row">
           <div className="col-12">

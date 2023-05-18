@@ -12,53 +12,55 @@ const Reservation = ({ reservation }) => {
   };
 
   return (
-    <div className="my-reservation mt-3 justify-content-between">
-      <div className="reservation-image">
-        <img src={reservation.restaurant_table.image} alt={reservation.table_name} className="my-reservation-img" />
-      </div>
-      <div className="ms-3 mt-3 reserve-list">
-        <ul className="reserved-items">
-          <li>
+    <>
+      <div className="my-reservation mt-3 justify-content-between">
+        <div className="reservation-image">
+          <img src={reservation.restaurant_table.image} alt={reservation.table_name} className="my-reservation-img" />
+        </div>
+        <div className="ms-3 mt-3 reserve-list">
+          <ul className="reserved-items">
+            <li>
 
-            <strong>City:</strong>
-            <span>{reservation.city}</span>
+              <strong>City:</strong>
+              <span>{reservation.city}</span>
 
-          </li>
+            </li>
 
-          <li>
+            <li>
 
-            <strong>Start Date:</strong>
-            <span>{reservation.start_date}</span>
+              <strong>Start Date:</strong>
+              <span>{reservation.start_date}</span>
 
-          </li>
+            </li>
 
-          <li>
+            <li>
 
-            <strong> End Date:</strong>
-            <span>{reservation.end_date}</span>
+              <strong> End Date:</strong>
+              <span>{reservation.end_date}</span>
 
-          </li>
+            </li>
 
-          <li>
+            <li>
 
-            <strong>Table Name:</strong>
-            <span>{reservation.table_name}</span>
+              <strong>Table Name:</strong>
+              <span>{reservation.table_name}</span>
 
-          </li>
-          <li>
+            </li>
+            <li>
 
-            <strong>Table size:</strong>
-            <span>{reservation.restaurant_table.table_size}</span>
+              <strong>Table size:</strong>
+              <span>{reservation.restaurant_table.table_size}</span>
 
-          </li>
+            </li>
 
-        </ul>
+          </ul>
 
-        <div className="">
-          <button type="button" className="btn btn-danger mt-3" onClick={() => handleDelete(reservation.id)}>Cancel reservation</button>
+          <div className="">
+            <button type="button" className="btn btn-danger mt-3" onClick={() => handleDelete(reservation.id)}>Cancel reservation</button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

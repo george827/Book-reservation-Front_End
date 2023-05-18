@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { FiArrowLeft } from 'react-icons/fi';
 import { deleteRestaurantTable } from '../redux/tables/restaurantTablesSlice';
+import NavigationPanel from './NavigationPanel';
 
 const DeleteTable = () => {
   const { tablesData } = useSelector((state) => state.restaurantTables);
@@ -13,7 +13,8 @@ const DeleteTable = () => {
 
   return (
     <>
-      <div className="container">
+      <NavigationPanel />
+      <div className="container delete-container">
         {tablesData.length === 0 && (
           <div className="d-flex justify-content-center">
             <p className="text-center">You have no tables</p>
@@ -21,14 +22,9 @@ const DeleteTable = () => {
         )}
         <div>
           <h1 className="text-center">Delete a Table</h1>
-          <div>
-            <a href="/homepage" className="back-arrow">
-              <FiArrowLeft />
-            </a>
-          </div>
         </div>
         {tablesData.map((table) => (
-          <div className="my-reservation mt-3 justify-content-between" key={table.id}>
+          <div className="my-reservation mt-3 justify-content-between mb-3" key={table.id}>
             <div className="reservation-imag">
               <img src={table.image} alt={table.name} className="my-reservation-img" />
             </div>
