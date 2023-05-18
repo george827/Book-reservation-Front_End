@@ -27,15 +27,15 @@ const NavigationPanel = () => {
 
         {showLinks && (
           <div className="nav-links" data-testid="links-container">
-            <Link to="/tables">Tables</Link>
+            <Link to="/homepage" onClick={() => setShowLinks(false)}>
+              Tables
+            </Link>
             <Link to="/AddTable">Add Table</Link>
             <Link to="/DeleteTable">Delete Table</Link>
             <Link to="/reservation-form">Make Reservation</Link>
             <Link to="/Myresercvations">My Reservations</Link>
             <LogoutButton />
-            <Link to="/homepage" onClick={() => setShowLinks(false)}>
-              Home
-            </Link>
+
           </div>
         )}
       </nav>
