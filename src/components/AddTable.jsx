@@ -35,7 +35,9 @@ const AddTable = () => {
   };
   return (
     <>
-      <NavigationPanel />
+      <div className="naviagtion-panel">
+        <NavigationPanel />
+      </div>
       <div className="container">
         <div className="row">
           <div className="col-12">

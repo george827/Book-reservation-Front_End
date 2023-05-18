@@ -15,6 +15,7 @@ const NavigationPanel = () => {
           <p className="ms-1">Logo</p>
           <button
             type="button"
+            data-testid="hamburger-button"
             className={`hamburger ${showLinks ? 'active' : ''}`}
             onClick={() => setShowLinks(!showLinks)}
           >

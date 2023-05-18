@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { FaCaretLeft } from 'react-icons/fa';
 import { deleteRestaurantTable } from '../redux/tables/restaurantTablesSlice';
+import NavigationPanel from './NavigationPanel';
 
 const TableDetails = () => {
   const { tableId } = useParams();
@@ -19,6 +21,9 @@ const TableDetails = () => {
 
   return (
     <>
+      <div className="naviagtion-panel">
+        <NavigationPanel />
+      </div>
       <div className="container details-container">
         <div className="row">
           <div className="col-md-6">
@@ -74,7 +79,7 @@ const TableDetails = () => {
           </div>
         </div>
         <Link to="/homepage" className="back-link mt-4">
-          Back to Home
+          <FaCaretLeft />
         </Link>
       </div>
     </>

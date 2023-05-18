@@ -27,7 +27,9 @@ const MyReservations = () => {
 
   return (
     <>
-      <NavigationPanel />
+      <div className="naviagtion-panel">
+        <NavigationPanel />
+      </div>
       <div className="container d-flex flex-column my-reserve
     align-items-center justify-content-center"
       >

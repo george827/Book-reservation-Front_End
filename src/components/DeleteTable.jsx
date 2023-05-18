@@ -13,7 +13,9 @@ const DeleteTable = () => {
 
   return (
     <>
-      <NavigationPanel />
+      <div className="naviagtion-panel">
+        <NavigationPanel />
+      </div>
       <div className="container delete-container">
         {tablesData.length === 0 && (
           <div className="d-flex justify-content-center">

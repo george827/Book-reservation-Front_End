@@ -249,13 +249,14 @@ li:nth-child(odd) {
 .back-link {
   text-decoration: none;
   border-radius: 5px;
-  padding: 10px 30px;
+  padding: 8px 20px;
   width: fit-content;
-  margin: 0 15px;
+  font-size: 20px;
   margin-bottom: 20px;
   background: #9acd32;
   color: #fff;
   cursor: pointer;
+  margin-right: auto;
 }
 
 .btn-delete-table {

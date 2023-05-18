@@ -13,9 +13,7 @@ describe('NavigationPanel', () => {
       </Router>,
     );
     const logoElements = screen.getAllByText('Logo');
-    const hamburgerButton = screen.getByRole('button', {
-      selector: '.hamburger',
-    });
+    const hamburgerButton = screen.getByTestId('hamburger-button');
     const sidenavLinks = screen.getAllByRole('link', { hidden: true });
 
     expect(logoElements.length).toBeGreaterThan(0);
@@ -30,9 +28,7 @@ describe('NavigationPanel', () => {
       </Router>,
     );
 
-    const hamburgerButton = screen.getByRole('button', {
-      selector: '.hamburger',
-    });
+    const hamburgerButton = screen.getByTestId('hamburger-button');
 
     fireEvent.click(hamburgerButton);
 

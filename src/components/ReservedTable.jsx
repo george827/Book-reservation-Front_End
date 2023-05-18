@@ -16,7 +16,9 @@ const ReservedTable = () => {
 
   return (
     <>
-      <NavigationPanel />
+      <div className="naviagtion-panel">
+        <NavigationPanel />
+      </div>
       <section className="reserved-table-section">
         <h3>Successfully reserved a table!</h3>
         <article>

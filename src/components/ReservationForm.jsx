@@ -74,7 +74,9 @@ const ReservationForm = () => {
   if (!table) {
     return (
       <>
-        <NavigationPanel />
+        <div className="naviagtion-panel">
+          <NavigationPanel />
+        </div>
         <form onSubmit={handleSubmit} className="reservation-form">
           <div className="form-input">
             <label htmlFor="user">Username : </label>
