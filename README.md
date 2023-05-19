@@ -81,6 +81,9 @@ Click [here](https://github.com/george827/Book-reservation-Back-End.git) to acce
 ## Kanban Board <a name="kanban-board"></a>
 - [Link to board](https://github.com/users/george827/projects/7)
 
+### Before starting
+![image](https://user-images.githubusercontent.com/61289730/236206442-7ee25269-42cb-4882-bf91-501366e2a83d.PNG)
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>

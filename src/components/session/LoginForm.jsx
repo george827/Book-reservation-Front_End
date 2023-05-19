@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const LoginForm = () => {
   const [name, setName] = useState('');
@@ -47,13 +48,17 @@ const LoginForm = () => {
           </div>
         </div>
       )}
+
       <form onSubmit={handleSubmit} className="mt-5 card p-5 my-card">
         {showAlert && (
           <div className="alert alert-danger" role="alert">
             Invalid name
           </div>
         )}
-        <div className="form-group">
+        <div className="logo-container">
+          <Logo />
+        </div>
+        <div className="form-group-session">
           <input
             type="text"
             id="name"
@@ -65,12 +70,12 @@ const LoginForm = () => {
           />
         </div>
 
-        <div className="form-group mt-4">
+        <div className="mt-4 btn-session">
           <button type="submit" className="session-btn">
             Login
           </button>
         </div>
-        <div className="form-group mt-2">
+        <div className="form-group-session mt-2">
           <p>Don&apos;t have an account?</p>
           <Link to="/register">Register</Link>
         </div>

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const RegistrationForm = () => {
   const [name, setName] = useState('');
@@ -37,7 +39,10 @@ const RegistrationForm = () => {
         </div>
       )}
       <form onSubmit={handleSubmit} className="mt-5 card p-5 my-card">
-        <div className="form-group">
+        <div className="logo-container">
+          <Logo />
+        </div>
+        <div className="form-group-session">
           <input
             type="text"
             id="name"
@@ -49,8 +54,12 @@ const RegistrationForm = () => {
           />
         </div>
 
-        <div className="form-group mt-4">
+        <div className="form-group-session mt-4">
           <button type="submit" className="session-btn">Register</button>
+        </div>
+        <div className="form-group-session mt-2">
+          <p>Have an account?</p>
+          <Link to="/">Log In</Link>
         </div>
       </form>
     </div>

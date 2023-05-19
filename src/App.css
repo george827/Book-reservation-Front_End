@@ -72,6 +72,24 @@ body,
   display: none;
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-top: -2rem;
+  margin-bottom: -3rem;
+}
+
+.logo-img-nav {
+  width: 10rem;
+  margin: 0 auto;
+}
+
+.logo-img-nav-s {
+  width: 8rem;
+}
+
 main {
   min-height: 100%;
   background: #f1f5f8;
@@ -184,6 +202,7 @@ img {
   display: inline-block;
   font-size: 16px;
   border-radius: 5px;
+  width: 100%;
 }
 
 .my-card {
@@ -198,8 +217,25 @@ img {
 
 .spin-color {
   color: #9acd32;
+}
 
-  /* background-color: #9acd32; */
+.logo-img {
+  width: 12rem;
+  margin: 0 auto;
+}
+
+.logo-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-session {
+  margin-top: 1rem;
+  width: 70%;
+}
+
+.form-group-session {
+  width: 70%;
 }
 
 /* details style */
@@ -567,7 +603,9 @@ li:nth-child(odd) {
   /* ---session page----- */
 
   .my-card {
-    width: 100%;
+    width: 50%;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
   }
 
   .home-section {
