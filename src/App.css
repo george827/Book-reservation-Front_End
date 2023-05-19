@@ -487,6 +487,19 @@ li:nth-child(odd) {
     background-color: #f2f2f2;
     text-align: start;
   }
+
+  .logo-img {
+    width: 8rem;
+  }
+
+  .logo > h3 {
+    font-size: 1rem;
+  }
+
+  .form-group-session,
+  .btn-session {
+    width: 100%;
+  }
 }
 
 /* --------------------- DESKTOP VERSION ---------------------- */
