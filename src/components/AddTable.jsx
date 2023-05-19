@@ -11,7 +11,8 @@ const AddTable = () => {
   const { tablesData } = useSelector((state) => state.restaurantTables);
 
   const handleSubmit = (event) => {
-    const id = tablesData.length + 1;
+    const ids = tablesData.map((table) => table.id);
+    const id = Math.max(...ids) + 1;
     event.preventDefault();
     if (image && name && tableSize && price && desc) {
       fetch('https://book-a-table.onrender.com/api/v1/restaurant_tables', {
