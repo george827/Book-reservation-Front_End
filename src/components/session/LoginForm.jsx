@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 
 const LoginForm = () => {
   const [name, setName] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [loading, setLoading] = useState(false);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -34,7 +34,7 @@ const LoginForm = () => {
             JSON.stringify({ id: data.user_id, name: data.user_name }),
           );
           // window.location.pathname = '/homepage';
-          history.push('/homepage');
+          navigate('/homepage');
         })
         .catch((error) => {
           throw new Error(error);
