@@ -52,6 +52,7 @@ const RestaurantTables = () => {
         ]);
       }
     }
+    // eslint-disable-next-line
   }, [index, tablesData]);
 
   const handlePrevClick = () => {
