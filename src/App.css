@@ -518,7 +518,7 @@ li:nth-child(odd) {
     width: 100%;
   }
 
-  .naviagtion-panel {
+  .navigation-panel {
     flex-basis: 18%;
     flex-shrink: 0;
   }
@@ -555,6 +555,7 @@ li:nth-child(odd) {
     font-size: 2vw;
     color: #333;
     padding-top: 4vw;
+    padding-left: 12px;
   }
 
   .sidenav-links {
@@ -565,29 +566,30 @@ li:nth-child(odd) {
 
   .logout-btn {
     text-decoration: none;
-    padding: 10px;
+    padding: 7px 12px;
     font-size: 20px;
     color: #333;
     background-color: #fff;
     text-align: start;
     width: 100%;
+    font-size: 1.7vw;
   }
 
   .logout-btn:hover {
-    background-color: #9acd32;
+    background-color: #dc3545;
     color: #fff;
   }
 
   .sidenav-link {
     font-size: 1.7vw;
-    padding: 5px;
+    padding: 7px 12px;
     text-decoration: none;
     color: #333;
   }
 
   .sidenav-link:hover {
-    background-color: #9acd32;
-    color: #fff;
+    background-color: none;
+    color: #333;
   }
 
   .social-links {
@@ -596,8 +598,8 @@ li:nth-child(odd) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 12%;
-    padding: 0;
+    width: 15%;
+    padding: 0 12px;
   }
 
   .social-link {
@@ -618,7 +620,8 @@ li:nth-child(odd) {
   .my-card {
     width: 50%;
     align-items: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
   }
 
   .home-section {
