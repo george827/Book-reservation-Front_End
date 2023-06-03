@@ -567,7 +567,6 @@ li:nth-child(odd) {
   .logout-btn {
     text-decoration: none;
     padding: 7px 12px;
-    font-size: 20px;
     color: #333;
     background-color: #fff;
     text-align: start;
@@ -588,7 +587,7 @@ li:nth-child(odd) {
   }
 
   .sidenav-link:hover {
-    background-color: none;
+    background-color: #fff;
     color: #333;
   }
 
@@ -620,7 +619,8 @@ li:nth-child(odd) {
   .my-card {
     width: 50%;
     align-items: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
   }
 

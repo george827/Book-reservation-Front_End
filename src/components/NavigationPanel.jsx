@@ -1,14 +1,16 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
-import LogoutButton from "./session/LogoutButton";
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import {
+  FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub,
+} from 'react-icons/fa';
+import LogoutButton from './session/LogoutButton';
 
 const NavigationPanel = () => {
   const [showLinks, setShowLinks] = useState(false);
 
   const activeStyle = {
-    backgroundColor: "#9acd32",
-    color: "#fff",
+    backgroundColor: '#9acd32',
+    color: '#fff',
   };
 
   return (
@@ -19,7 +21,7 @@ const NavigationPanel = () => {
           <button
             type="button"
             data-testid="hamburger-button"
-            className={`hamburger ${showLinks ? "active" : ""}`}
+            className={`hamburger ${showLinks ? 'active' : ''}`}
             onClick={() => setShowLinks(!showLinks)}
           >
             <span className="bar" />
