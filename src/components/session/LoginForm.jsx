@@ -33,7 +33,6 @@ const LoginForm = () => {
             'user',
             JSON.stringify({ id: data.user_id, name: data.user_name }),
           );
-          // window.location.pathname = '/homepage';
           navigate('/homepage');
         })
         .catch((error) => {
