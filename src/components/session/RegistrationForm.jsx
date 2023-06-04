@@ -57,7 +57,7 @@ const RegistrationForm = () => {
         <div className="form-group-session mt-4">
           <button type="submit" className="session-btn">Register</button>
         </div>
-        <div className="form-group-session mt-2">
+        <div className="form-group-session mt-2 my-link">
           <p>Have an account?</p>
           <Link to="/">Log In</Link>
         </div>
