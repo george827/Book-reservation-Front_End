@@ -10,7 +10,9 @@ const MyReservations = () => {
 
   useEffect(() => {
     const fetchReservations = async () => {
-      const response = await fetch('https://book-a-table.onrender.com/api/v1/reservations');
+      const response = await fetch(
+        'https://book-a-table.onrender.com/api/v1/reservations',
+      );
       const data = await response.json();
       if (data) {
         const userReservations = data.filter(
@@ -23,6 +25,7 @@ const MyReservations = () => {
       }
     };
     fetchReservations();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -30,7 +33,8 @@ const MyReservations = () => {
       <div className="naviagtion-panel">
         <NavigationPanel />
       </div>
-      <div className="container d-flex flex-column my-reserve
+      <div
+        className="container d-flex flex-column my-reserve
     align-items-center justify-content-center"
       >
         <div>

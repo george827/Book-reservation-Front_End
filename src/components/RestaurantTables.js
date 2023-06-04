@@ -52,6 +52,7 @@ const RestaurantTables = () => {
         ]);
       }
     }
+    // eslint-disable-next-line
   }, [index, tablesData]);
 
   const handlePrevClick = () => {
@@ -67,7 +68,7 @@ const RestaurantTables = () => {
   }
   return (
     <section className="tables-section">
-      <h2>Book a Table</h2>
+      <h2>Reserve a Table</h2>
       <button className="prev-btn" type="button" onClick={handlePrevClick}>
         <FaCaretLeft />
       </button>
