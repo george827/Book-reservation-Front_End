@@ -66,7 +66,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Back End app <a name="back-end-app"></a>
+## Back End app <a name="back-end-app"></a>
 
 Click [here](https://github.com/george827/Book-reservation-Back-End.git) to access the back end app that was built with Ruby on Rails
 
